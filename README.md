@@ -50,10 +50,10 @@ GET /api/global
 which will return a json in the following format:
 ```json
 {
-    'value': 987, // total number of COVID-19 cases, worldwide, since the beginning of pandemic
-    'socadangdieutri': 654, // number of ongoing cases
-    'socakhoi': 321, // number of cured cases
-    'socatuvong': 0, // number of deaths caused by COVID-19
+    "value": 987, // total number of COVID-19 cases, worldwide, since the beginning of pandemic
+    "socadangdieutri": 654, // number of ongoing cases
+    "socakhoi": 321, // number of cured cases
+    "socatuvong": 0, // number of deaths caused by COVID-19
 }
 ```
 
@@ -66,10 +66,10 @@ GET /api/vietnam
 which will return a json in the following format:
 ```json
 {
-    'value': 987, // total number of COVID-19 cases happened in Vietnam since the beginning of pandemic
-    'socadangdieutri': 654, // number of ongoing cases in Vietnam
-    'socakhoi': 321, // number of cured cases in Vietnam
-    'socatuvong': 0, // number of deaths caused by COVID-19 in Vietnam
+    "value": 987, // total number of COVID-19 cases happened in Vietnam since the beginning of pandemic
+    "socadangdieutri": 654, // number of ongoing cases in Vietnam
+    "socakhoi": 321, // number of cured cases in Vietnam
+    "socatuvong": 0, // number of deaths caused by COVID-19 in Vietnam
 }
 ```
 
@@ -82,20 +82,20 @@ GET /api/provinces
 which will return a json in the following format:
 ```json
 {
-    '23': {
-        'hc-key': '23', // primary key of province
-        'name': 'Hồ Chí Minh', // name of province
-        'value': 987, // total number of COVID-19 cases happened in HCM since the beginning of pandemic
-        'socadangdieutri': 654, // number of ongoing cases in HCM
-        'socakhoi': 321, // number of cured cases in HCM
-        'socatuvong': 0, // number of deaths caused by COVID-19 in HCM
+    "23": {
+        "hc-key": "23", // primary key of province
+        "name": "Hồ Chí Minh", // name of province
+        "value": 987, // total number of COVID-19 cases happened in HCM since the beginning of pandemic
+        "socadangdieutri": 654, // number of ongoing cases in HCM
+        "socakhoi": 321, // number of cured cases in HCM
+        "socatuvong": 0, // number of deaths caused by COVID-19 in HCM
     },
-    '42': {
-        'hc-key': '42', // primary key of province
-        'name': 'Bắc Giang', // name of province
-        ...
+    "42": {
+        "hc-key": "42", // primary key of province
+        "name": "Bắc Giang", // name of province
+        // ...
     },
-    ...
+    // ...
 }
 ```
 
