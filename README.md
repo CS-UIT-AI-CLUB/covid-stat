@@ -98,6 +98,18 @@ which will return a json in the following format:
 }
 ```
 
+### Stats in the past
+
+The system also support retrieving data fetched in the past through the use of URL parameters. In other words, you can request with the following command:
+
+```
+GET /api/provinces?timestamp=1626351396
+```
+
+Using the `timestamp` parameter, statistics collected nearest to said timestamp will be returned. If there exists no data within 10 minutes interval of `timestamp`, status code `404` will be returned instead.
+
+The same scheme also applies for all three APIs.
+
 ## Acknowledgements
 
 This repository would not be possible without the use of real-time data from Vietnam Ministry of Health (https://ncov.moh.gov.vn/).
