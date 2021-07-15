@@ -48,7 +48,7 @@ Global/worldwide statistics on COVID-19 can be retrieved using
 GET /api/global
 ```
 which will return a json in the following format:
-```json
+```jsonc
 {
     "value": 987, // total number of COVID-19 cases, worldwide, since the beginning of pandemic
     "socadangdieutri": 654, // number of ongoing cases
@@ -64,7 +64,7 @@ National statistics in Vietnam on COVID-19 can be retrieved using
 GET /api/vietnam
 ```
 which will return a json in the following format:
-```json
+```jsonc
 {
     "value": 987, // total number of COVID-19 cases happened in Vietnam since the beginning of pandemic
     "socadangdieutri": 654, // number of ongoing cases in Vietnam
@@ -80,7 +80,7 @@ COVID-19 statistics of every Vietnamese provinces can be retrieved using
 GET /api/provinces
 ```
 which will return a json in the following format:
-```json
+```jsonc
 {
     "23": {
         "hc-key": "23", // primary key of province
