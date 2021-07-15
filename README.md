@@ -1,6 +1,6 @@
 # CovidStat: Real-time statistic update for COVID-19
 
-[Live demo](https://aiclub.uit.edu.vn/hcm-covidsafe)
+[Live demo](https://aiclub.uit.edu.vn/covidstat)
 
 Get all the latest news and statistics such as COVID-19 cases, deaths for over 60 Vietnam provinces, and more!
 
@@ -18,7 +18,7 @@ Get all the latest news and statistics such as COVID-19 cases, deaths for over 6
 
 ## Quick start
 
-[Live demo](https://aiclub.uit.edu.vn/hcm-covidsafe)
+[Live demo](https://aiclub.uit.edu.vn/covidstat)
 
 To start customizing as your own system, you need to clone the repo:
 
