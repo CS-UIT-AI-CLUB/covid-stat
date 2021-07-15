@@ -99,6 +99,10 @@ which will return a json in the following format:
 }
 ```
 
+## Acknowledgements
+
+This repository would not be possible without the use of real-time data from Vietnam Ministry of Health (https://ncov.moh.gov.vn/).
+
 ## License
 
 This codebase is protected under MIT License. People are free to contribute, copy, modify or publishing without any restriction.
