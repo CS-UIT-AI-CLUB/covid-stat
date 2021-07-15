@@ -24,8 +24,8 @@ def job():
 if __name__ == '__main__':
     print('Start worker')
     job()
-    # Fetch data every 10 minutes
-    schedule.every(10).minutes.do(job)
+    # Fetch data with an interval
+    schedule.every(int(os.environ['FETCH_INTERVAL'])).seconds.do(job)
     while True:
         schedule.run_pending()
         time.sleep(1)

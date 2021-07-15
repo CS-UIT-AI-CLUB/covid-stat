@@ -27,7 +27,7 @@ def fetch_province(response):
     # Fetch json data
     js = fetch_json(response)
     
-    global highcharts
+    highcharts = None
     # Fetch provinces info
     if not highcharts:
         highcharts = fetch_highcharts()
