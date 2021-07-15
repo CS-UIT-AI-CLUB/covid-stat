@@ -7,7 +7,7 @@ Get all the latest news and statistics such as COVID-19 cases, deaths for over 6
 ## Features
 
 - Fetch real-time statistics from Bo Y Te Viet Nam (https://ncov.moh.gov.vn/).
-- Data will be automatically fetched every 10 minutes and stored in redis database.
+- Data will be automatically fetched every 10 minutes and stored in MongoDB.
 - REST API for fast and easy access to fetched data. 
 
 ## Table of contents
