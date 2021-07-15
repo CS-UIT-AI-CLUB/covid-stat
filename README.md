@@ -30,7 +30,7 @@ git clone https://github.com/CS-UIT-AI-CLUB/covid-stat
 Thanks to Docker, the system can be easily deployed using the following command:
 
 ```
-docker-compose --env-file=config/.env up -d --no-deps
+docker-compose --env-file=config/.env up -d --build --no-deps
 ```
 
 ## Customize
