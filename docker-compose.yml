@@ -15,9 +15,9 @@ services:
     #         args:
     #             - FRONTEND_DOMAIN=${FRONTEND_DOMAIN}
 
-    # backend:
-    #     build: ./backend/
-    #     env_file: ./config/.env
+    backend:
+        build: ./backend/
+        env_file: ./config/.env
 
     worker:
         build: ./src/
