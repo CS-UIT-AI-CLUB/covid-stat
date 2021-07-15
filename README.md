@@ -15,7 +15,6 @@ Get all the latest news and statistics such as COVID-19 cases, deaths for over 6
 - [Quick start](#quick-start)
 - [Customize](#customize)
 - [API](#api)
-- [Authors](#authors)
 
 ## Quick start
 
