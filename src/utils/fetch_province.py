@@ -56,12 +56,15 @@ def fetch_highcharts():
     '''
     Fetch metadata for Vietnam's provinces such as hc-key or name.
     '''
-    # Fetch Vietnam highcharts data
-    data = requests.get('https://ncov.moh.gov.vn/o/corona.trangchu.top/js/vn-all.js', 
-                        verify=False).content.decode()
-    
-    # Locate highcharts data from js source code
-    idx = re.search('{', data)
+    idx = None
+    while not idx:
+        print('Trying to fetch highcharts data...')
+        # Fetch Vietnam highcharts data
+        data = requests.get('https://ncov.moh.gov.vn/o/corona.trangchu.top/js/vn-all.js', 
+                            verify=False).content.decode()
+        
+        # Locate highcharts data from js source code
+        idx = re.search('{', data)
     data = data[idx.start():]
     highcharts = json.loads(data)
     return highcharts
