@@ -14,11 +14,22 @@ client = MongoClient(mongo_uri)
 db = client.covidstat
 
 def job():
-    data = fetch_data()
+    data, timeline = fetch_data()
     t = int(time.time())
     data['timestamp'] = t
     print('Done fetching data. Timestamp = {}'.format(t))
+    
+    # Insert new data into the db
     db.data.insert_one(data)
+    
+    # If timeline not already in db, insert
+    timeline_db = db.timeline.find({'timestamp': timeline['timestamp']})
+    if len(list(timeline_db)) == 0:
+        db.timeline.insert_one(timeline)
+        print('Inserted new timeline.')
+    else:
+        print('Timeline already exists. Skipping...')
+        
     print('Done inserting into database.')
     
 if __name__ == '__main__':

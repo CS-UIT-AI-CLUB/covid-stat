@@ -1,7 +1,7 @@
 import requests
 from .fetch_province import fetch_province
 from .fetch_global import fetch_global
-
+from .fetch_timeline import fetch_timeline
 
 def fetch_data():
     # Request html content from Bo Y Te
@@ -11,7 +11,13 @@ def fetch_data():
     res['provinces'] = fetch_province(response)
     res.update(fetch_global(response))
     
-    return res
+    timestamp, content = fetch_timeline(response)
+    timeline = {
+        'timestamp': timestamp,
+        'content': content
+    }
+    
+    return res, timeline
 
 
 def fetch_html():
