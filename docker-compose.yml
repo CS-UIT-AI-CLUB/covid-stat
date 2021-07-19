@@ -20,16 +20,24 @@ services:
 
     backend:
         build: ./backend/
-        env_file: ./config/.env
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+            - FETCH_INTERVAL=${FETCH_INTERVAL}
         depends_on:
             - mongo
 
     worker:
         build: ./src/
-        env_file: ./config/.env
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+            - FETCH_INTERVAL=${FETCH_INTERVAL}
         depends_on:
             - mongo
 
     mongo:
         image: mongo
-        env_file: ./config/.env
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+            - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
