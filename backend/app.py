@@ -1,9 +1,11 @@
 from flask import Flask, request
+from flask_cors import CORS
 from flask_pymongo import PyMongo
 import time
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 app.config["MONGO_URI"] = 'mongodb://' + \
                             os.environ['MONGO_INITDB_ROOT_USERNAME'] + ':' + \
