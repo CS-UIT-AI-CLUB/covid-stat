@@ -43,3 +43,12 @@ def get_global():
         return res['global']
     else:
         return {}, 404
+    
+@app.route("/timeline", methods=["GET"])
+def get_timeline():
+    timeline = list(db.timeline.find(sort=[('timestamp', -1)]))
+    if timeline:
+        del timeline[0]['_id']
+        return timeline[0]
+    else:
+        return {}, 404

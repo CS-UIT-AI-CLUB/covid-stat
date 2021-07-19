@@ -110,6 +110,26 @@ Using the `timestamp` parameter, statistics collected nearest to said timestamp 
 
 The same scheme also applies for all three APIs.
 
+### Latest news
+
+The latest COVID-19 news could be retrieved using the following command:
+
+```
+GET /api/timeline
+```
+
+Results are in the following format:
+```jsonc
+{
+    "timestamp": 1626351396, // Unix timestamp of news (UTC+0)
+    "content": [
+        "Content Paragraph 1",
+        "Content Paragraph 2",
+        // ...
+    ] // Content of the news, seperated by paragraphs. Normalized to NFKC unicode format.
+}
+```
+
 ## Acknowledgements
 
 This repository would not be possible without the use of real-time data from Vietnam Ministry of Health (https://ncov.moh.gov.vn/).
