@@ -26,7 +26,11 @@ def query_timestamp():
 def get_provinces():
     res = query_timestamp()
     if res:
-        return res['provinces']
+        res = res['provinces']
+        res = list(res.values())
+        return {
+            'provinces': res
+        }
     else:
         return {}, 404
 
