@@ -12,11 +12,11 @@ services:
             - backend
             - mongo
 
-    # frontend:
-    #     build: 
-    #         context: ./frontend
-    #         args:
-    #             - FRONTEND_DOMAIN=${FRONTEND_DOMAIN}
+    frontend:
+        build: 
+            context: ./frontend
+            args:
+                - FRONTEND_DOMAIN=${FRONTEND_DOMAIN}
 
     backend:
         build: ./backend/

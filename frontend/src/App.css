@@ -1,0 +1,10 @@
+.App {
+    text-align: center;
+}
+
+/*Custom css*/
+
+body {
+    background-color: #DDF2EB;
+    touch-action: none;
+}
